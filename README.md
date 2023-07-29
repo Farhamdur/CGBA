@@ -9,7 +9,7 @@ Before executing the code, ensure that the following packages are installed in y
   
 Or you can type the following to create an environment:  
 
-'''
+```
 This is a code to copy
 '''
 
