@@ -1,0 +1,1 @@
+The folder named 'val' contains 50 images from the ILSVRC2012 validation set. To perform the attack, insert all the images from the ILSVRC2012 validation set into that folder.
