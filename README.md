@@ -12,3 +12,5 @@ Or you can type the following to create an environment:
 '''
 This is a code to copy
 '''
+
+$ npm install --save @github/clipboard-copy-element
