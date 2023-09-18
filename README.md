@@ -1,5 +1,6 @@
-# CGBA: Curvature-aware Geometric Black-box Attack
-Welcome to our repository featuring the official implementation of the CGBA algorithm. This work is accepted for publication in ICCV 2023.
+# [CGBA: Curvature-aware Geometric Black-box Attack](https://arxiv.org/abs/2308.03163)
+Welcome to our repository featuring the official implementation of the CGBA algorithm. This work is accepted for publication in ICCV 2023. <br>
+The arXiv version of the paper is available [here](https://arxiv.org/abs/2308.03163).
 ## Requirements
 Before executing the code, ensure that the following packages are installed in your environment:
 * PyTorch and Trochvision
@@ -20,6 +21,11 @@ conda env create -f cgba_env.yml
 ## Citation
 Please consider citing our paper in your publications if it contributes to your research.
 ```
-
+@article{reza2023cgba,
+  title={CGBA: Curvature-aware Geometric Black-box Attack},
+  author={Reza, Md Farhamdur and Rahmati, Ali and Wu, Tianfu and Dai, Huaiyu},
+  journal={arXiv preprint arXiv:2308.03163},
+  year={2023}
+}
 ```
 
