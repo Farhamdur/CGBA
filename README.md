@@ -21,11 +21,13 @@ conda env create -f cgba_env.yml
 ## Citation
 Please consider citing our paper in your publications if it contributes to your research.
 ```
-@article{reza2023cgba,
-  title={CGBA: Curvature-aware Geometric Black-box Attack},
-  author={Reza, Md Farhamdur and Rahmati, Ali and Wu, Tianfu and Dai, Huaiyu},
-  journal={arXiv preprint arXiv:2308.03163},
-  year={2023}
+@InProceedings{Reza_2023_ICCV,
+    author    = {Reza, Md Farhamdur and Rahmati, Ali and Wu, Tianfu and Dai, Huaiyu},
+    title     = {CGBA: Curvature-aware Geometric Black-box Attack},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {124-133}
 }
 ```
 
