@@ -1,4 +1,4 @@
-
+import copy
 import numpy as np
 import torch
 from utils import clip_image_values
@@ -214,13 +214,13 @@ class Proposed_attack():
         norms = []
         n_query = []
         grad = 0   
-        x_inv = self.inv_tf(self.src_img.cpu()[0,:,:,:].squeeze(), self.mean, self.std) # to normalize the image from 0 to 1
+        x_inv = self.inv_tf(copy.deepcopy(self.src_img.cpu()[0,:,:,:].squeeze()), self.mean, self.std) # to normalize the image from 0 to 1
         if self.tar_img == None:
             x_random, query_random= self.find_random_adversarial(self.src_img)
         if self.tar_img != None:
             x_random, query_random= self.tar_img, 0
         x_b, query_b = self.bin_search(self.src_img, x_random)
-        x_b_inv = self.inv_tf(x_b.cpu()[0,:,:,:].squeeze(), self.mean, self.std) 
+        x_b_inv = self.inv_tf(copy.deepcopu(x_b.cpu()[0,:,:,:].squeeze()), self.mean, self.std) 
         norm_initial = torch.norm(x_b_inv - x_inv)
         norms.append(norm_initial)
         q_num = query_random + query_b
@@ -250,7 +250,7 @@ class Proposed_attack():
             q_num = q_num + qs
             assert self.all_queries == q_num
             x_b = x_adv
-            x_adv_inv = self.inv_tf(x_adv.cpu()[0,:,:,:].squeeze(), self.mean, self.std)            
+            x_adv_inv = self.inv_tf(copy.deepcopy(x_adv.cpu()[0,:,:,:].squeeze()), self.mean, self.std)            
             norm = torch.norm(x_inv - x_adv_inv)
             if i%4==0 or i==self.iteration-1:
                 if self.verbose_control == 'Yes':
