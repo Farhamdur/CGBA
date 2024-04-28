@@ -161,9 +161,8 @@ class Proposed_attack():
             if self.is_adversarial(p_near_boundary) == -1:
                 break
             num_calls += 1
-            if num_calls>100:
-                print('Finding initial boundary point failed')
-                break
+            if num_calls>=40:
+                return x_b, num_calls
         perturbed , n_calls = self.SemiCircular_boundary_search(x_s, x_b, p_near_boundary)
         return perturbed, num_calls+n_calls
 
