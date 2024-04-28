@@ -141,6 +141,8 @@ class Proposed_attack():
             num_calls += 1
             if self.is_adversarial(perturbed) == 1:
                 break
+            if num_calls >=40:
+                return x_b, num_calls
         perturbed, bin_query = self.bin_search(self.src_img, perturbed)
         return perturbed, num_calls-1 + bin_query
 
