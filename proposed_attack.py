@@ -221,7 +221,7 @@ class Proposed_attack():
         if self.tar_img != None:
             x_random, query_random= self.tar_img, 0
         x_b, query_b = self.bin_search(self.src_img, x_random)
-        x_b_inv = self.inv_tf(copy.deepcopu(x_b.cpu()[0,:,:,:].squeeze()), self.mean, self.std) 
+        x_b_inv = self.inv_tf(copy.deepcopy(x_b.cpu()[0,:,:,:].squeeze()), self.mean, self.std) 
         norm_initial = torch.norm(x_b_inv - x_inv)
         norms.append(norm_initial)
         q_num = query_random + query_b
