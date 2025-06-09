@@ -26,7 +26,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
 
-num_img = 100
+num_img = 50
 iteration =93  
 model_arc = 'resnet50'             # Enter 'resnet50' or 'resnet101' or 'vgg16' or 'ViT
 attack_methods = ['CGBA_H', 'CGBA']             # Attacking methods: 'CGBA' or 'CGBA_H'  
